@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+    <link rel="stylesheet"  href="css/diseño.css">
+</head>
+
+<body class="login" background="Images/contact.jpg">
+
+   <!-- Barrita de navegacion -->
+   <nav class="navbar navbar-expand-lg  bg-body-tertiary"  data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img class="logo"src="Images/rayo.png" alt="Logo" style="width:55px;height:45px;"> </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="Index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="CreacionUsuario.html">Registrarse</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Especialistas
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="doc.html">Doc Hudson </a></li> <!-- electrónica automotriz -->
+              <li><a class="dropdown-item" href="mate.html">Tow "Mate" Mater</a></li> <!-- cajas de cambio -->
+              <li><a class="dropdown-item" href="ramon.html">Ramón</a></li> <!-- suspensión y dirección -->
+              <li><a class="dropdown-item" href="https://www.youtube.com/watch?v=doLMt10ytHY">Benito</a></li>
+            
+              </a></li>
+            </ul>
+          </li>
+          
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+
+<div class="container"> 
+    <div class="row"> <div class="col-3"></div><div class="col-6">
+                <div>
+                    <h1 style="color: white">Servicio al cliente</h1>
+                    <p style="color: white">Use nuestro formulario de contacto para asistencia rápida y personalizada.</p>
+                </div>
+                <div class="row">
+                    <form id="formContactUs" name="formContactUs" method="post" action="" novalidate="novalidate">
+                        <div class="col-3"></div>
+                        <div class="col-auto">
+                        <div class="row g-3 align-items-center">
+                        <label for="nombre" style="color: white"><span style="color: #dd1c47;">*</span> Nombre Completo</label>
+                        <input class="input" type="text" name="nombre" id="nombre" style="width: 500px;" >
+                        <label for="telefono" style="color: white"><span style="color: #dd1c47;">*</span> Teléfono</label>
+                        <input class="input" type="text" name="telefono" id="telefono" style="width: 500px;">
+                        <label for="email" style="color: white"><span style="color: #dd1c47;">*</span> Email</label>
+                        <input class="input" type="email" name="email" id="email" style="width: 500px;">
+                        <label for="Tema" style="color: white"><span style="color: #dd1c47;">*</span> Tema</label>
+                        <select class="input" name="Tema" id="tema" style="width: 500px;">
+                            <option value="">-- Seleccione un tema --</option>
+                            <option value="Tengo dudas de las promociones en la página">Tengo dudas de las promociones en la página</option>
+                            <option value="Necesito mas información de los artículos">Necesito mas información de los artículos</option>
+                            <option value="Hice una compra y no he recibido mi correo de confirmación">Hice una compra y no he recibido mi correo de confirmación</option>
+                            <option value="La página no me permite hacer compras">La página no me permite hacer compras</option>
+                            <option value="Tengo problemas para ingresar a mi cuenta">Tengo problemas para ingresar a mi cuenta</option>
+                            <option value="Otro Tema">Otro Tema</option>
+                        </select>
+                        <label for="comentarios" style="color: white"><span style="color: #dd1c47;">*</span> Comentarios / Descripción de problema</label>
+                        <textarea name="comentarios" id="comentarios" style="width: 500px;"></textarea> 
+                        <div class="row col-12"></div>
+                        <button type="submit" id="btnEnviar" name="btnEnviar" class="button-lineal primary small" style="width: 500px;">Enviar</button>
+                    </div></div>
+                    <div class="col-3"></div>
+                    </form>
+                </div>
+            </div> <div class="col-3"></div></div>
+</div>
+
+</body>
+
+</html>

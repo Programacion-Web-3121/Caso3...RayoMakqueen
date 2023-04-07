@@ -1,0 +1,28 @@
+.fondoLogin{
+
+background:linear-gradient(to bottom, hsla(0, 0%, 2%, 0.733),rgba(255, 0, 0, 0));
+
+}
+
+
+label{
+  display: inline-block;
+  width: 250px;
+}
+
+
+.login{
+    background-color:aquamarine;s
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.carru{
+    style="width:500px;height:600px;";
+}
+
+
+.logo{
+    float: left;
+}
