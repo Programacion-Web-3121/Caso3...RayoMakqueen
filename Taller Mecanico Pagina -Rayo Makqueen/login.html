@@ -8,8 +8,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
     <link rel="stylesheet"  href="diseño/estilo.css">
+    <script src="js/jquery-3.6.4.min.js"></script>
+    
 </head>
-<body class="fondoLogin"  >
+<body class="fondoLogin" >
 
 
 
@@ -28,9 +30,7 @@
           <li class="nav-item">
             <a class="nav-link" href="login.html">Login</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="CreacionUsuario.html">Registrarse</a>
-          </li>
+         
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Especialistas
@@ -61,16 +61,20 @@
         <div class="col-3"></div>
         <div class="col-4 align-self-center">
         <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label" style="color: whitesmoke">Correo Electronico</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Tu-correo@Domino.cl">
+            <label for="correo" class="form-label" style="color: whitesmoke">Correo Electronico</label>
+            <input type="email" class="form-control" id="correo" placeholder="Tu-correo@Domino.cl">
+            <div class="valid-feedback"></div>
+            <div class="invalid-feedback"> Debe ingresar correo</div>
           </div>
           
 
         <div class="row g-3 align-items-center">
             
             <div class="col-12">
-                <label for="exampleFormControlInput1" class="form-label" style="color: white">Contraseña</label>
-              <input type="password" id="inputPassword6" class="form-control" placeholder="Ingresa tu Contraseña" aria-labelledby="passwordHelpInline">
+                <label for="contraseña" class="form-label" style="color: white">Contraseña</label>
+              <input type="password" id="contraseña" class="form-control" placeholder="Ingresa tu Contraseña" aria-labelledby="passwordHelpInline">
+              <div class="valid-feedback"></div>
+              <div class="invalid-feedback"> Debe ingresar Contraseña</div>
             </div>
             <div class="col-9">
               <span id="passwordHelpInline" class="form-text">
@@ -82,10 +86,10 @@
           </div>
           <div class="row g-3">
           <div class="col-9 align-self-end">
-            <button type="submit" class="btn btn-primary mb-3">Volver</button>
+            <button type="button" class="btn btn-primary mb-3"><a href="Index.html" style="color: white;">Volver</a></button>
           </div>
           <div class="col-3 align-self-end">
-            <button type="submit" class="btn btn-primary mb-3">Ingresar</button>
+            <button type="submit" class="btn btn-primary mb-3" id="Ingreso">Ingresar</button>
           </div>
         </div>
         </div>
@@ -94,3 +98,68 @@
     </div>
 </body>
 </html>
+
+<script>
+
+  $(document).ready(function () {
+  
+    //alert("JQUERY OK");
+    $("#Ingreso").click(function (event) {
+      var dato_correo = $("#correo").val();
+
+      if (dato_correo=="") {
+        
+        $("#correo").addClass("is-invalid");
+        $("#correo").removeClass("is-valid");
+      }
+      else {
+        $("#correo").addClass("is-valid");
+        $("#correo").removeClass("is-invalid");
+      }
+  
+      var dato_contra = $("#contraseña").val();
+
+      if (dato_contra=="") {
+        
+        $("#contraseña").addClass("is-invalid");
+        $("#contraseña").removeClass("is-valid");
+      }
+      else {
+        $("#contraseña").addClass("is-valid");
+        $("#contraseña").removeClass("is-invalid");
+      }
+
+
+      if(dato_correo=="admin" && dato_contra=="admin"){
+        alert("MODO ADMINISTRADOR ACTIVADO");
+        location.href ="Inicio_admin.html";
+
+        
+
+      }
+
+
+      if(dato_correo=="mecanico" && dato_contra=="mecanico"){
+        alert("Bienvenido Mecanico N° ???");
+        location.href ="InicioTrabajador.html";
+
+        
+
+      }
+
+    
+
+    });
+    
+
+     
+
+
+
+    
+  
+  
+  
+  
+  });
+  </script>

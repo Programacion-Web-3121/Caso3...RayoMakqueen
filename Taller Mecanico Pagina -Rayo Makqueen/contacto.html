@@ -8,10 +8,11 @@
     <title>Contacto</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
-    <link rel="stylesheet"  href="css/diseño.css">
+    <link rel="stylesheet"  href="diseño/estilo.css">
+    <script src="js/jquery-3.6.4.min.js"></script>
 </head>
 
-<body class="login" background="Images/contact.jpg">
+<body class="fondoLogin" style="height: 950px;">
 
    <!-- Barrita de navegacion -->
    <nav class="navbar navbar-expand-lg  bg-body-tertiary"  data-bs-theme="dark">
@@ -28,9 +29,7 @@
           <li class="nav-item">
             <a class="nav-link" href="login.html">Login</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="CreacionUsuario.html">Registrarse</a>
-          </li>
+          
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Especialistas
@@ -62,16 +61,25 @@
                     <p style="color: white">Use nuestro formulario de contacto para asistencia rápida y personalizada.</p>
                 </div>
                 <div class="row">
-                    <form id="formContactUs" name="formContactUs" method="post" action="" novalidate="novalidate">
-                        <div class="col-3"></div>
-                        <div class="col-auto">
+                    <form action="">
                         <div class="row g-3 align-items-center">
                         <label for="nombre" style="color: white"><span style="color: #dd1c47;">*</span> Nombre Completo</label>
                         <input class="input" type="text" name="nombre" id="nombre" style="width: 500px;" >
+                        <div class="valid-feedback"></div>
+                        <div class="invalid-feedback"> Debe ingresar su nombre</div>
+                      </div>
+                        <div class="row g-3 align-items-center">
                         <label for="telefono" style="color: white"><span style="color: #dd1c47;">*</span> Teléfono</label>
                         <input class="input" type="text" name="telefono" id="telefono" style="width: 500px;">
+                        <div class="valid-feedback"></div>
+                        <div class="invalid-feedback"> Debe ingresar su Telefono</div>
+                      </div>
+                      <div class="row g-3 align-items-center">
                         <label for="email" style="color: white"><span style="color: #dd1c47;">*</span> Email</label>
                         <input class="input" type="email" name="email" id="email" style="width: 500px;">
+                        <div class="valid-feedback"></div>
+                        <div class="invalid-feedback"> Debe ingresar correo</div>
+                      </div> <div class="row g-3 align-items-center">
                         <label for="Tema" style="color: white"><span style="color: #dd1c47;">*</span> Tema</label>
                         <select class="input" name="Tema" id="tema" style="width: 500px;">
                             <option value="">-- Seleccione un tema --</option>
@@ -82,13 +90,19 @@
                             <option value="Tengo problemas para ingresar a mi cuenta">Tengo problemas para ingresar a mi cuenta</option>
                             <option value="Otro Tema">Otro Tema</option>
                         </select>
+                        <div class="valid-feedback"></div>
+                        <div class="invalid-feedback"> Debe ingresar un tema</div>
+                      </div>
+                     <div class="row g-3 align-items-center">
                         <label for="comentarios" style="color: white"><span style="color: #dd1c47;">*</span> Comentarios / Descripción de problema</label>
                         <textarea name="comentarios" id="comentarios" style="width: 500px;"></textarea> 
+                       
                         <div class="row col-12"></div>
-                        <button type="submit" id="btnEnviar" name="btnEnviar" class="button-lineal primary small" style="width: 500px;">Enviar</button>
+                        <button type="button" id="btnEnviar" name="btnEnviar" class="button-lineal primary small" style="width: 500px;">Enviar</button>
+                      </div>
+                      </form>
                     </div></div>
                     <div class="col-3"></div>
-                    </form>
                 </div>
             </div> <div class="col-3"></div></div>
 </div>
@@ -96,3 +110,78 @@
 </body>
 
 </html>
+
+<script>
+
+$(document).ready(function () {
+
+  //alert("JQUERY OK");
+
+$("#btnEnviar").click(function (event) {
+
+var fla="si"
+var dato_nombre = $("#nombre").val();
+
+if (dato_nombre=="") {
+  
+  $("#nombre").addClass("is-invalid");
+  $("#nombre").removeClass("is-valid");
+  fla="no"
+}
+else {
+  $("#nombre").addClass("is-valid");
+  $("#nombre").removeClass("is-invalid");
+}
+
+
+var dato_correo = $("#email").val();
+
+if (dato_correo=="") {
+  
+  $("#email").addClass("is-invalid");
+  $("#email").removeClass("is-valid");
+  fla="no"
+}
+else {
+  $("#email").addClass("is-valid");
+  $("#email").removeClass("is-invalid");
+}
+
+var dato_tema = $("#tema").val();
+
+if (dato_tema=="") {
+  
+  $("#tema").addClass("is-invalid");
+  $("#tema").removeClass("is-valid");
+  fla="no"
+}
+else {
+  $("#tema").addClass("is-valid");
+  $("#tema").removeClass("is-invalid");
+}
+
+
+var dato_telefono = $("#telefono").val();
+
+if (dato_telefono.length !=9) {
+  
+  $("#telefono").addClass("is-invalid");
+  $("#telefono").removeClass("is-valid");
+  fla="no"
+}
+else {
+  $("#telefono").addClass("is-valid");
+  $("#telefono").removeClass("is-invalid");
+}
+
+if (fla=="si"){
+  alert("Solicitud enviada");
+} 
+
+  });
+
+
+
+
+});
+</script>

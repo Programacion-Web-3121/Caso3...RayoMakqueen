@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Crear Usuario</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
     <link rel="stylesheet"  href="diseño/estilo.css">
+    <script src="js/jquery-3.6.4.min.js"></script>
 
 </head>
 <body class="fondoLogin">
@@ -29,8 +30,9 @@
               <a class="nav-link" href="login.html">Login</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="CreacionUsuario.html">Registrarse</a>
+              <a class="nav-link" href="Inicio_admin.html">Admin</a>
             </li>
+           
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Especialistas
@@ -58,52 +60,166 @@
     </div>
     <div class="row">
       <div class="col-4" style="height: 700px;"><h1 style="text-align: center;"></h1></div>
-      <div class="col-4" style="height: 700%; float: left right:-50%;">
-        
-        <label for="nombre" class="label"> Nombre: <input type="text" name="nombre" size="35" style="align-items: end;"></p><label>
-        <label for="apellido" class="label">Apellido: <input type="text" name="apellido" size="35"></p></label>
-        <label for="correo" class="label">Correo : <input type="text" name="correo" size="36"></p></label>
-        <label for="password" class="label">Contraseña: <input type="password" name="Contraseña" size="36"></p></label>
-        <label for="Sexo" class="label">Sexo: Hombre <input type="radio" name="hm" value="h">Mujer<input type="radio" name="hm" value="m"></label>
+      <div class="col-4" style="height: 700%;">
+        <form action="" id="formulario">
+        <div class="mb-4">
+        <label for="nombre" class="label"> Nombre: <input type="text" name="nombre" size="35" style="align-items: end;" id="nombre">
+          <div class="valid-feedback"></div>
+          <div class="invalid-feedback"> Debe ingresar un nombre mayor a 6 caracteres</div>
+        </div>    
+          <label>
+            <div class="mb-4">
+              <label for="apellido" class="label">Apellido: <input type="text" name="apellido" size="35" id="apellido">
+                <div class="valid-feedback"></div>
+                <div class="invalid-feedback"> Debe ingresar un Apellido</div>
+
+              </label>
+            </div>
+        <div class="mb-4">    
+        <label for="correo" class="label">Correo : <input type="text" name="correo" size="35" id="correo">
+          <div class="valid-feedback"></div>
+          <div class="invalid-feedback"> Debe ingresar un Email </div>
+              </label>
+        </div>      
+        <div class="mb-4">
+        <label for="contraseña" class="label">Contraseña: 
+          <input type="password" name="Contraseña" size="35" id="contraseña">
+          <div class="valid-feedback"></div>
+          <div class="invalid-feedback"> El campo contraseña no puede estar vacio </div>
+              </label>
+        </div>
+        <div class="mb-4">
+          <div class="form">     
+          <label for="Sexo" class="label">
+          Sexo: Hombre  <input type="radio" name="sexo"  id="rbuttonm">
+                Mujer   <input type="radio" name="sexo"  id="rbuttonh">
+          <div class="valid-feedback"></div>
+          <div class="invalid-feedback"> Debe Seleccionar un Sexo </div>
+              </label>
+        </div>
+        </div>
+        <div class="mb-4">
+          <label for="condiciones" class="label"> Acepto condiciones: 
+                <input type="checkbox" name="checkbox1" id="checkbox1" >
+                <div class="valid-feedback"></div>
+                <div class="invalid-feedback"> Debe Aceptar los Terminos</div>
+          </label>
         <p></p>
-        <label for="condiciones" class="label"> Acepto condiciones: <input type="checkbox" value="acepta" name="condiciones" ></label>
-        <p></p>
-        <label for=""><input type="submit" value="Enviar"> <input type="reset" value="Borrar"></label> 
-        
+        </div>
+        <div class="mb-4">
+        <label for=""><input type="button" value="Enviar" id="btn_subirtrabajo"> 
+                      <input type="reset" value="Borrar" id="btn_borrartrabajo">
+        </label>
+        </div> 
+            </form>
         </div>
       <div class="col-4" style="height: 700%;"><h1 style="text-align: center;"></h1></div>
 
-
-    </div>
-    <div class="row">
-      <div class="col-2"><h3 style="text-align: center;">Servicio al Cliente</h3>
-        <li style="text-align: center;"> ????</li>
-        <li style="text-align: center;"> ????</li>
-        <li style="text-align: center;"> ????</li>
-        </div>
-      <div class="col-2"><h3 style="text-align: center;">Quienes Somos</h3>
-        <li style="text-align: center;"> ????</li>
-        <li style="text-align: center;"> ????</li>
-        <li style="text-align: center;"> ????</li>
-      </div>
-
-      <div class="col-2"><h3 style="text-align: center;">Contactanos</h3>
-        <li style="text-align: left;"> +56911111111 Contact-Center</li>
-        <li style="text-align: left;"> +56922222222 Casa Matriz</li>
-        <li style="text-align: left;"> +56933333333 ????</li></div>
-      <div class="col-2"><h3 style="text-align: center;">Nuestras Sedes</h3>
-        <li style="text-align: center;">????</li>
-        <li style="text-align: center;"> ????</li>
-        <li style="text-align: center;"> ????</li></div>
-      <div class="col-2"><h4 style="text-align: center;">Recibe Nuestras Ofertas</h4>
-        <li style="text-align: center;">Correo Electronico</li>
-        <li style="text-align: center;"> <input type="text" size="12"></li>
-        <label style="text-align: center;"><input type="submit" value="Enviar"></label>
-      </div>
-      <div class="col-2"><h3 style="text-align: center;"></h3></div>
 
     </div>
   </div>  
 
 </body>
 </html>
+
+
+<script>
+
+  $(document).ready(function() {
+  
+    //alert("JQUERY OK");
+
+
+  $("#btn_subirtrabajo").click(function (event) {
+
+//alert("botom OK");
+
+var nombre_usuario=$("#nombre").val();
+
+if (nombre_usuario.length <= 6 ) {
+  
+  $("#nombre").addClass("is-invalid");
+  $("#nombre").removeClass("is-valid");
+}
+else {
+  $("#nombre").addClass("is-valid");
+  $("#nombre").removeClass("is-invalid");
+}
+
+
+var apellido_usuario = $("#apellido").val();
+
+if (apellido_usuario=="") {
+  
+  $("#apellido").addClass("is-invalid");
+  $("#apellido").removeClass("is-valid");
+}
+else {
+  $("#apellido").addClass("is-valid");
+  $("#apellido").removeClass("is-invalid");
+}
+
+var correo_usuario = $("#correo").val();
+
+if (correo_usuario=="") {
+  
+  $("#correo").addClass("is-invalid");
+  $("#correo").removeClass("is-valid");
+}
+else {
+  $("#correo").addClass("is-valid");
+  $("#correo").removeClass("is-invalid");
+}
+
+var contraseña_cliente = $("#contraseña").val();
+
+
+if (contraseña_cliente=="") {
+  
+  $("#contraseña").addClass("is-invalid");
+  $("#contraseña").removeClass("is-valid");
+}
+else {
+  $("#contraseña").addClass("is-valid");
+  $("#contraseña").removeClass("is-invalid");
+}
+
+ 
+
+
+if( $("#checkbox1").is(':checked') ) {
+  
+  $("#checkbox1").addClass("is-valid");
+  $("#checkbox1").removeClass("is-invalid");
+  
+}
+else {
+ 
+  $("#checkbox1").addClass("is-invalid");
+  $("#checkbox1").removeClass("is-valid");
+}
+
+
+if( $("#rbuttonm").is(':checked') ) {
+  
+  $("#rbuttonm").addClass("is-valid");
+  $("#rbuttonm").removeClass("is-invalid");
+  
+}
+else {
+ 
+  $("#rbuttonm").addClass("is-invalid");
+  $("#rbuttonm").removeClass("is-valid");
+}
+
+
+
+
+});
+
+  
+  
+  
+  });
+
+</script>

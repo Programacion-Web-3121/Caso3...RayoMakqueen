@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revision trabajo 1</title>
+    <link rel="stylesheet" href="diseño/estilo.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet"  href="diseño/estilo.css">
+    <script src="js/jquery-3.6.4.min.js"></script>
+
+</head>
+
+<body class="fondoLogin" style="height: 1300px;">
+    
+     <!-- Barrita de navegacion -->
+     <nav class="navbar navbar-expand-lg  bg-body-tertiary"  data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img class="logo"src="Images/rayo.png" alt="Logo" style="width:55px;height:45px;"> </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="Index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="login.html">Login</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="Inicio_admin.html">Admin</a>
+              </li>
+             
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Especialistas
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="doc.html">Doc Hudson </a></li> <!-- electrónica automotriz -->
+                  <li><a class="dropdown-item" href="mate.html">Tow "Mate" Mater</a></li> <!-- cajas de cambio -->
+                  <li><a class="dropdown-item" href="ramon.html">Ramón</a></li> <!-- suspensión y dirección -->
+                  <li><a class="dropdown-item" href="https://www.youtube.com/watch?v=doLMt10ytHY">Benito</a></li>
+                
+                  </a></li>
+                </ul>
+              </li>
+              
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      <br>
+    <form action="formulario_trabajador" id="formulario_trabajador">
+    <div class="container-fluid" style="margin-left: 40%;">    
+        <div>
+            <h1>Bienvenido: "Don Admin" </h1>
+
+        </div>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-3">
+                  <label for="nombretrabajo" class="form-label">Tipo de trabajo:</label>
+                  <input type="email" class="form-control" id="nombretrabajo" placeholder="Caja de Cambios">
+                </div>
+
+            </div>
+        </div>
+        <br>
+        <form action="">
+        <div class="mb-3">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-3">
+                        <label for="nombretrabajo" class="form-label">Nombre Trabajo:</label>
+                        <input type="email" class="form-control" id="nombretrabajo" placeholder="Caja de Cambios N°1 ">
+                         
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="mb-3">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-3">
+                        <label for="fecha" class="form-label">Fecha:</label>
+                        <input type="text" class="form-control" id="fecha" placeholder="11-01-2020">
+                         
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="mb-3">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-3">
+                        <label for="nombre_cliente" class="form-label">Nombre Cliente:</label>
+                        <input type="text" class="form-control" id="nombrecliente" placeholder="Jesus Rivera">
+                        
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="mb-3">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Descripción:</label>
+                        <textarea class="form-control" id="descripcion" rows="3" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"></textarea>
+                         <div class="valid-feedback"></div>
+                         <div class="invalid-feedback"> Debe Agregar una Descripcion al trabajo</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="mb-3">
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-3">
+                        
+                        <label for="subirimagen" class="form-label">Imagenes:</label>
+                        <img src="Images/Trabajo1/cambiom1.jpg" class="d-block w-100" alt="...">
+                        <img src="Images/Trabajo1/cambiom2.png" class="d-block w-100" alt="...">
+
+
+
+                        <br>
+                        
+                          
+                          <button 
+                          id="btn_rechazarTrabajo"
+                          style="float:right"
+                          type="button"
+                          class="btn btn-primary"
+                          style="border-radius: 30px">
+                         Rechazar
+                        </button>
+                        
+                        <button 
+                          id="btn_subirTrabajo"
+                          style="float:left"
+                          type="button"
+                          class="btn btn-primary"
+                          style="border-radius: 30px">
+                         Aprobar
+                        </button> 
+                      
+                    
+                    </div>
+                </div>        
+            </div>
+
+      
+
+          </div>
+
+          <div class="mb-3">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-3">
+                        <label for="exampleFormControlTextarea1" class="form-label"></label>
+                        <textarea class="form-control" id="Rechazo" rows="3" placeholder="Razon por la cual se rechaza "></textarea>
+                        <div class="valid-feedback"></div>
+                        <div class="invalid-feedback"> Debe ingresar razón por la cual se rechaza</div>
+                         
+                    </div>
+                </div>
+            </div>
+
+          </div>
+
+          <button id="Enviar" style="float:left" type="button" class="btn btn-primary" style="border-radius: 30px">
+            Enviar
+          </button>
+
+        
+    </div>
+  </form>    
+</body>
+
+</html>
+<script>
+
+$(document).ready(function () {
+  
+  $("#Rechazo").hide();
+  $("#Enviar").hide();
+
+    //alert("JQUERY OK");
+  $("#btn_rechazarTrabajo").click(function (event) {
+
+    $("#Rechazo").show();
+    $("#Enviar").show();
+
+  });
+
+
+  $("#Enviar").click(function (event) {
+    var Rechazar = $("#Rechazo").val();
+    var fla = "si"
+    if (Rechazar=="") {
+
+      $("#Rechazo").addClass("is-invalid");
+      $("#Rechazo").removeClass("is-valid");
+      fla = "no"
+    }
+    else {
+      $("#Rechazo").addClass("is-valid");
+      $("#Rechazo").removeClass("is-invalid");
+    } 
+    if (fla=="si"){
+  alert("Rechazo enviado");
+} 
+  })
+
+
+
+});
+
+
+
+
+</script>

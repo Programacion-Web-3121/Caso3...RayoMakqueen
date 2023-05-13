@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Trabajo</title>
+    <link rel="stylesheet" href="diseño/estilo.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet"  href="diseño/estilo.css">
+    <script src="js/jquery-3.6.4.min.js"></script>
+
+</head>
+
+<body class="fondoLogin" style="height: 950px;">
+    
+     <!-- Barrita de navegacion -->
+     <nav class="navbar navbar-expand-lg  bg-body-tertiary"  data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img class="logo"src="Images/rayo.png" alt="Logo" style="width:55px;height:45px;"> </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="Index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="login.html">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="InicioTrabajador.html">Mecanico</a>
+              </li>
+             
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Especialistas
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="doc.html">Doc Hudson </a></li> <!-- electrónica automotriz -->
+                  <li><a class="dropdown-item" href="mate.html">Tow "Mate" Mater</a></li> <!-- cajas de cambio -->
+                  <li><a class="dropdown-item" href="ramon.html">Ramón</a></li> <!-- suspensión y dirección -->
+                  <li><a class="dropdown-item" href="https://www.youtube.com/watch?v=doLMt10ytHY">Benito</a></li>
+                
+                  </a></li>
+                </ul>
+              </li>
+              
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      <br>
+    <form action="formulario_trabajador" id="formulario_trabajador">
+    <div class="container-fluid" style="margin-left: 40%;">    
+        <div>
+            <h1>Bienvenido: "?????????" </h1>
+
+        </div>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-3">
+                    <select class="form-select" aria-label="Default select example" id="tipotrabajo">
+                        <option selected>Tipo de trabajo</option>
+                        <option value="1">Caja de cambios</option>
+                        <option value="2">Electronica</option>
+                        <option value="3">Suspension y dirección</option>
+                    </select>
+                          <div class="valid-feedback"></div>
+                          <div class="invalid-feedback"> Debe Elegir una de las opciones del menu</div>
+                </div>
+
+            </div>
+        </div>
+        <br>
+        <form action="">
+        <div class="mb-3">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-3">
+                        <label for="nombretrabajo" class="form-label">Nombre Trabajo:</label>
+                        <input type="email" class="form-control" id="nombretrabajo" placeholder="">
+                         <div class="valid-feedback"></div>
+                         <div class="invalid-feedback"> Debe ingresar un nombre al trabajo</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="mb-3">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-3">
+                        <label for="fecha" class="form-label">Fecha:</label>
+                        <input type="date" class="form-control" id="fecha" placeholder="">
+                         <div class="valid-feedback"></div>
+                          <div class="invalid-feedback"> Debe ingresar una fecha valida</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="mb-3">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-3">
+                        <label for="nombre_cliente" class="form-label">Nombre Cliente:</label>
+                        <input type="email" class="form-control" id="nombrecliente" placeholder="">
+                         <div class="valid-feedback"></div>
+                          <div class="invalid-feedback"> Debe ingresar un nombre</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="mb-3">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Descripción:</label>
+                        <textarea class="form-control" id="descripcion" rows="3"></textarea>
+                         <div class="valid-feedback"></div>
+                         <div class="invalid-feedback"> Debe Agregar una Descripcion al trabajo</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="mb-3">
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-3">
+                        
+                        <label for="subirimagen" class="form-label">Insertar Imagenes:</label>
+                        <input class="form-control" type="file" id="subirimagen" multiple>
+                        <div class="valid-feedback"></div>
+                        <div class="invalid-feedback"> Debe Agregar una imagen al trabajo</div>
+
+
+
+                        <br>
+                        
+                          
+                          <button 
+                          id="btn_subirTrabajo"
+                          style="float:right"
+                          type="button"
+                          class="btn btn-primary"
+                          style="border-radius: 30px"
+                        >
+                         Subir Trabajo
+                        </button>
+                      
+                    
+                    </div>
+                </div>        
+            </div>
+
+      
+
+          </div>
+
+        
+    </div>
+  </form>    
+</body>
+
+</html>
+
+<script>
+
+  $(document).ready(function() {
+  
+    //alert("JQUERY OK");
+
+
+  $("#btn_subirTrabajo").click(function (event) {
+
+//alert("botom OK");
+var fla ="si"
+var tipo_trabajo=$("#tipotrabajo").val();
+
+if (tipo_trabajo=="Tipo de trabajo") {
+  
+  $("#tipotrabajo").addClass("is-invalid");
+  $("#tipotrabajo ").removeClass("is-valid");
+  fla ="no";
+}
+else {
+  $("#tipotrabajo").addClass("is-valid");
+  $("#tipotrabajo").removeClass("is-invalid");
+}
+
+
+var nombre_trabajo = $("#nombretrabajo").val();
+
+if (nombre_trabajo=="") {
+  
+  $("#nombretrabajo").addClass("is-invalid");
+  $("#nombretrabajo").removeClass("is-valid");
+  fla ="no";
+}
+else {
+  $("#nombretrabajo").addClass("is-valid");
+  $("#nombretrabajo").removeClass("is-invalid");
+}
+
+var fecha_trabajo = $("#fecha").val();
+
+if (fecha_trabajo=="") {
+  
+  $("#fecha").addClass("is-invalid");
+  $("#fecha").removeClass("is-valid");
+  fla ="no";
+}
+else {
+  $("#fecha").addClass("is-valid");
+  $("#fecha").removeClass("is-invalid");
+}
+
+var nombre_cliente = $("#nombrecliente").val();
+
+
+if (nombre_cliente=="") {
+  
+  $("#nombrecliente").addClass("is-invalid");
+  $("#nombrecliente").removeClass("is-valid");
+  fla ="no";
+}
+else {
+  $("#nombrecliente").addClass("is-valid");
+  $("#nombrecliente").removeClass("is-invalid");
+}
+
+var  cont_descripcion= $("#descripcion").val();
+
+if (cont_descripcion==""){
+
+  $("#descripcion").addClass("is-invalid");
+  $("#descripcion").removeClass("is-valid");
+  fla ="no";
+}
+else {
+  $("#descripcion").addClass("is-valid");
+  $("#descripcion").removeClass("is-invalid");
+}
+
+
+var subir_imagen=$("#subirimagen").val() ;
+
+if (subir_imagen==""){
+
+$("#subirimagen").addClass("is-invalid");
+$("#subirimagen").removeClass("is-valid");
+fla ="no";
+}
+else {
+$("#subirimagen").addClass("is-valid");
+$("#subirimagen").removeClass("is-invalid");
+}
+
+if (fla=="si"){
+  alert("Solicitud enviada");
+} 
+
+
+
+});
+
+  
+  
+  
+  });
+
+</script>
